@@ -37,10 +37,10 @@ streamlit.header("Fruityvice Fruit Advice!")
 try:
   fruit_choice = streamlit.text_input('What fruit would you like information about?','Kiwi')
   if not fruit_choice:
-    streamlit.error("Please select a fruit!!")
+      streamlit.error("Please select a fruit!!")
   else:
-    back_from_funtion = get_fruit_data(fruit_choice)
-    streamlit.dataframe(back_from_funtion)
+      back_from_funtion = get_fruit_data(fruit_choice)
+      streamlit.dataframe(back_from_funtion)
 
   
 #dont run any past
