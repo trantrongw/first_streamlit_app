@@ -47,9 +47,9 @@ except URLError as e:
 streamlit.header("the fruit_load_list contain:")
 #snow funtion
 def get_fruit_load_list():
-  with my_cnx.cursor() as my mycursor
-  my_cur.execute("select * from fruit_load_list")
-  return my_cur.fetchall()
+  with my_cnx.cursor() as my mycursor:
+    my_cur.execute("select * from fruit_load_list")
+    return my_cur.fetchall()
 
 #Add a button
 if streamlit.button('Get fruit load list'):
