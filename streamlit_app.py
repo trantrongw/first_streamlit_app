@@ -63,6 +63,12 @@ if streamlit.button('Get fruit load list'):
   my_datarow = get_fruit_load_list()
   my_cnx.close()
   streamlit.dataframe(my_datarow)
+ 
+#Add text to insert
+new_fruit = streamlit.text_input('Fruit name:','Kiwi')
+if streamlit.button('Save DB'):
+  result = insert_row_snowflake(new_fruit)
+  streamlit.write(result)
   
 #dont run any past
 streamlit.stop()
