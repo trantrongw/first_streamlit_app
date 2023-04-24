@@ -51,10 +51,10 @@ def get_fruit_load_list():
        mycursor.execute("select * from fruit_load_list")
        return mycursor.fetchall()
 #snow Allow user add Fruit:
- def insert_row_snowflake(new_fruit):
-    with my_cnx.cursor() as mycursor:
-      mycursor.execute("insert into FRUIT_LOAD_LIST values ('"+mycursor+"')")
-      return 'thank for adding: '+mycursor
+def insert_row_snowflake(new_fruit):
+  with my_cnx.cursor() as mycursor:
+    mycursor.execute("insert into FRUIT_LOAD_LIST values ('"+mycursor+"')")
+    return 'thank for adding: '+mycursor
       
 
 #Add a button
