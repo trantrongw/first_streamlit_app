@@ -29,7 +29,7 @@ streamlit.dataframe(fruits_show)
 def get_fruit_data(this_fruit_choise):
   fruityvice_response = requests.get("https://fruityvice.com/api/fruit/"+this_fruit_choise)
   fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
-  return streamlit.dataframe(fruityvice_normalized)
+  return fruityvice_normalized
 
 
 #New Sector
@@ -40,8 +40,8 @@ try:
       streamlit.error("Please select a fruit!!")
   else:
       back_from_funtion = get_fruit_data(fruit_choice)
-      streamlit.header("back_from_funtion!")
-      #streamlit.dataframe(back_from_funtion)
+      #streamlit.header("back_from_funtion!")
+      streamlit.dataframe(back_from_funtion)
 except URLError as e:
   streamlit.error()
   
