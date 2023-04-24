@@ -53,7 +53,7 @@ def get_fruit_load_list():
 #snow Allow user add Fruit:
 def insert_row_snowflake(new_fruit):
   with my_cnx.cursor() as mycursor:
-    mycursor.execute("insert into FRUIT_LOAD_LIST values ('"+mycursor+"')")
+    mycursor.execute("insert into FRUIT_LOAD_LIST values ('"+new_fruit+"')")
     return 'thank for adding: '+mycursor
       
 
